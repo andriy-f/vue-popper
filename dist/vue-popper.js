@@ -80,6 +80,9 @@
         }
       }
     },
+    components: {
+      wrapper: 'div'
+    },
     data: function data() {
       return {
         referenceElm: null,
@@ -376,14 +379,14 @@
   /* script */
   const __vue_script__ = script;
   // For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
-  script.__file = "/Users/felix.schlenkrich/Documents/Dev/js/vue-popper/src/component/popper.js.vue";
+  script.__file = "/home/andriy/dev/vue-popper/src/component/popper.js.vue";
   /* template */
   var __vue_render__ = function() {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
     return _c(
-      "span",
+      "wrapper",
       [
         _c(
           "transition",
@@ -396,23 +399,16 @@
             on: { "after-leave": _vm.doDestroy }
           },
           [
-            _c(
-              "span",
-              {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: !_vm.disabled && _vm.showPopper,
-                    expression: "!disabled && showPopper"
-                  }
-                ],
-                ref: "popper"
-              },
-              [_vm._t("default", [_vm._v(_vm._s(_vm.content))])],
-              2
-            )
-          ]
+            !_vm.disabled && _vm.showPopper
+              ? _c(
+                  "wrapper",
+                  { ref: "popper" },
+                  [_vm._t("default", [_vm._v(_vm._s(_vm.content))])],
+                  2
+                )
+              : _vm._e()
+          ],
+          1
         ),
         _vm._v(" "),
         _vm._t("reference")
