@@ -83,7 +83,7 @@
     <transition :name="transition" :enter-active-class="enterActiveClass" :leave-active-class="leaveActiveClass" @after-leave="doDestroy">
       <span
         ref="popper"
-        v-show="!disabled && showPopper">
+        v-if="!disabled && showPopper">
         <slot>{{ content }}</slot>
       </span>
     </transition>
