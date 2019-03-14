@@ -376,14 +376,14 @@
   /* script */
   const __vue_script__ = script;
   // For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
-  script.__file = "/Users/felix.schlenkrich/Documents/Dev/js/vue-popper/src/component/popper.js.vue";
+  script.__file = "/home/andriy/dev/vue-popper/src/component/popper.js.vue";
   /* template */
   var __vue_render__ = function() {
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
     return _c(
-      "span",
+      "div",
       [
         _c(
           "transition",
@@ -397,7 +397,7 @@
           },
           [
             _c(
-              "span",
+              "div",
               {
                 directives: [
                   {

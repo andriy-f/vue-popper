@@ -79,16 +79,16 @@
 </style>
 
 <template>
-  <span>
+  <div>
     <transition :name="transition" :enter-active-class="enterActiveClass" :leave-active-class="leaveActiveClass" @after-leave="doDestroy">
-      <span
+      <div
         ref="popper"
         v-show="!disabled && showPopper">
         <slot>{{ content }}</slot>
-      </span>
+      </div>
     </transition>
     <slot name="reference"></slot>
-  </span>
+  </div>
 </template>
 
 <script>
