@@ -374,79 +374,60 @@
   }
 
   /* script */
-  const __vue_script__ = script;
-  // For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
+  var __vue_script__ = script; // For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
+
   script.__file = "/home/andriy/dev/vue-popper/src/component/popper.js.vue";
   /* template */
-  var __vue_render__ = function() {
+
+  var __vue_render__ = function __vue_render__() {
     var _vm = this;
+
     var _h = _vm.$createElement;
+
     var _c = _vm._self._c || _h;
-    return _c(
-      "div",
-      [
-        _c(
-          "transition",
-          {
-            attrs: {
-              name: _vm.transition,
-              "enter-active-class": _vm.enterActiveClass,
-              "leave-active-class": _vm.leaveActiveClass
-            },
-            on: { "after-leave": _vm.doDestroy }
-          },
-          [
-            _c(
-              "div",
-              {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: !_vm.disabled && _vm.showPopper,
-                    expression: "!disabled && showPopper"
-                  }
-                ],
-                ref: "popper"
-              },
-              [_vm._t("default", [_vm._v(_vm._s(_vm.content))])],
-              2
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _vm._t("reference")
-      ],
-      2
-    )
+
+    return _c("div", [_c("transition", {
+      attrs: {
+        name: _vm.transition,
+        "enter-active-class": _vm.enterActiveClass,
+        "leave-active-class": _vm.leaveActiveClass
+      },
+      on: {
+        "after-leave": _vm.doDestroy
+      }
+    }, [_c("div", {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: !_vm.disabled && _vm.showPopper,
+        expression: "!disabled && showPopper"
+      }],
+      ref: "popper"
+    }, [_vm._t("default", [_vm._v(_vm._s(_vm.content))])], 2)]), _vm._v(" "), _vm._t("reference")], 2);
   };
+
   var __vue_staticRenderFns__ = [];
   __vue_render__._withStripped = true;
+  /* style */
 
-    /* style */
-    const __vue_inject_styles__ = undefined;
-    /* scoped */
-    const __vue_scope_id__ = undefined;
-    /* module identifier */
-    const __vue_module_identifier__ = undefined;
-    /* functional template */
-    const __vue_is_functional_template__ = false;
-    /* style inject */
-    
-    /* style inject SSR */
-    
+  var __vue_inject_styles__ = undefined;
+  /* scoped */
 
-    
-    var VuePopper = normalizeComponent(
-      { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
-      __vue_inject_styles__,
-      __vue_script__,
-      __vue_scope_id__,
-      __vue_is_functional_template__,
-      __vue_module_identifier__,
-      undefined,
-      undefined
-    );
+  var __vue_scope_id__ = undefined;
+  /* module identifier */
+
+  var __vue_module_identifier__ = undefined;
+  /* functional template */
+
+  var __vue_is_functional_template__ = false;
+  /* style inject */
+
+  /* style inject SSR */
+
+  var VuePopper = normalizeComponent({
+    render: __vue_render__,
+    staticRenderFns: __vue_staticRenderFns__
+  }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, undefined, undefined);
 
   return VuePopper;
 

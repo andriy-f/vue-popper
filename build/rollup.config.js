@@ -21,6 +21,7 @@ export default {
     babel({
       runtimeHelpers: true,
       externalHelpers: false,
+      extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.vue'],
     }),
     (isProduction && terser())
   ],
